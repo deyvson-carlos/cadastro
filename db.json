@@ -1,0 +1,21 @@
+{
+    "contatos": [
+      {
+        "id": 1,
+        "nome": "João Silva",
+        "email": "joao.silva@example.com",
+        "celular": "11999999999",
+        "telefone": "1133334444",
+        "favorito": false
+      },
+      {
+        "id": 2,
+        "nome": "Maria Oliveira",
+        "email": "maria.oliveira@example.com",
+        "celular": "11988888888",
+        "telefone": "1122223333",
+        "favorito": true
+      }
+    ]
+  }
+  

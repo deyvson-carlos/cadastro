@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Consulta de Contatos</h2>
+
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Pesquisar por nome, email, celular ou telefone..."
+        [(ngModel)]="pesquisa"
+      />
+    </div>
+  
+    <!-- Lista de contatos -->
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Celular</th>
+            <th>Telefone</th>
+            <th>Favorito</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contato of pesquisarContatos()">
+            <td>{{ contato.nome }}</td>
+            <td>{{ contato.email }}</td>
+            <td>{{ contato.celular }}</td>
+            <td>{{ contato.telefone }}</td>
+            <td class="text-center">
+              <input 
+                type="checkbox" 
+                [checked]="contato.favorito" 
+                (change)="marcarComoFavorito(contato)" 
+              />
+            </td>
+            <td>
+              <button class="btn btn-sm btn-warning" (click)="editarContato(contato)">Editar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
